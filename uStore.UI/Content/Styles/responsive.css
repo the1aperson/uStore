@@ -1,0 +1,82 @@
+﻿/* sm */
+@media (max-width: 767px) {
+    .navbar-collapse.in {
+        overflow: inherit;
+    }
+
+    .mainmenu ul li a {
+        padding-left: 15px;
+    }
+
+    .header-bottom {
+        margin-bottom: 0px;
+    }
+
+
+    #slider-carousel .item {
+        padding-left: 10px;
+    }
+
+    #slider-carousel .book {
+        float: right;
+    }
+
+    .companyinfo {
+        text-align: center;
+    }
+
+    .book {
+        margin-top: 10px;
+    }
+}
+
+/* xs */
+@media (max-width: 480px) {
+
+    .contactinfo {
+        text-align: center;
+    }
+
+        .contactinfo ul li a {
+            padding-right: 15px;
+            padding-left: 0;
+        }
+
+    .social-icons.pull-right {
+        float: none !important;
+        text-align: center;
+    }
+
+    .shop-menu.pull-right {
+        float: none !important;
+        text-align:center;
+    }
+
+    .contactinfo .nav.nav-pills, .social-icons .nav.navbar-nav {
+        display: inline-block;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .mainmenu {
+        width: 100%;
+    }
+            
+    .companyinfo h2, .companyinfo p {
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    .featured_books {
+        margin-top: 5px;
+    }
+
+}
