@@ -1,0 +1,155 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<section id="slider">
+    <!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <h1>Shirtless Bear-Fighter! TP</h1>
+                                <h2>by Jody Leheup &amp; Sebastian Girner</h2>
+                                <p>After being betrayed by the bears that raised him, the legendary SHIRTLESS BEAR-FIGHTER wanders the forest he’s sworn to protect, fist-fighting bears, eating flapjacks, and being the angriest man the world has ever known! When wild-eyed, super-strong bears attack the citizens of Major City, Shirtless ventures into the human world to do what he does best...PUNCH THOSE BEARS IN THE FACE! But all is not as it seems. Someone is manipulating Shirtless...and only by confronting the demons of his past can Shirtless hope to save his future! A heart-filled, hilarious tall tale for the ages...you don't want to miss SHIRTLESS BEAR-FIGHTER!</p>
+                                <button type="button" class="btn btn-default get"
+                                        onclick="addToCart(1)">
+                                    Get it now
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+
+                                <img src="~/Content/Images/Books/ShirtlessBearFighter-tp_cvr.jpg" class="book img-responsive" />
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1>Royal City Vol. 1: Next of Kin TP</h1>
+                                <h2>by Jeff Lemire</h2>
+                                <p>A family falling apart are haunted by different versions of Tommy, the youngest son, who drowned decades ago.</p>
+                                <button type="button" class="btn btn-default get"
+                                        onclick="addToCart(2)">
+                                    Get it now
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/Content/Images/Books/RoyalCity_Vol01-1.png" class="book img-responsive" />
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1>Low Book One HC</h1>
+                                <h2>by Rick Remender</h2>
+                                <p>Millennia ago, mankind fled the Earth’s surface into the bottomless depths of the darkest oceans. Shielded from a merciless sun’s scorching radiation, the human race tried to stave off certain extinction by sending robotic probes far into the galaxy to search for a new home among the stars. Generations later, one family is about to be torn apart in a conflict that will usher in the final race to save humanity from a world beyond hope.</p>
+                                <button type="button" class="btn btn-default get"
+                                        onclick="addToCart(3)">
+                                    Get it now
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/Content/Images/Books/Low_DeluxeBookOne-1.png" class="book img-responsive" />
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 padding-right">
+
+                <div class="featured_books">
+                    <!--featured books-->
+                    <h2 class="title text-center">Featured Books</h2>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/Content/Images/Books/IHateFairyland_Vol03-1.png" alt="" />
+                                    <p>I Hate Fairland Vol. 3: Good Girl TP $16.99</p>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>$16.99</h2>
+                                        <p>I Hate Fairland Vol. 3: Good Girl TP</p>
+                                        <a href="#" class="btn btn-default add-to-cart"
+                                           onclick="addToCart(4); return false;">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Add to cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/Content/Images/Books/Saga_vol08_cvr.jpg" alt="" />
+                                    <p>Saga: Book Two Deluxe HC - $49.99</p>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>$49.99</h2>
+                                        <p>Saga: Book Two Deluxe HC</p>
+                                        <a href="#" class="btn btn-default add-to-cart"
+                                           onclick="addToCart(5); return false;">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Add to cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/Content/Images/Books/EastOfWest_vol1-1.png" alt="" />
+                                    <p>East of West Vol. 1: The Promise TP - $9.99</p>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>$9.99</h2>
+                                        <p>East of West Vol. 1: The Promise TP</p>
+                                        <a href="#" class="btn btn-default add-to-cart"
+                                           onclick="addToCart(6); return false;">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Add to cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--featured books-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="dialog" title="Shopping Cart">
+    <p id="cart-contents">Your Cart is Currently Empty</p>
+</div>

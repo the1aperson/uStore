@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title | The ComicPanel</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- jQuery UI lightness theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">
+    <link href="~/Content/Styles/bootswatchJournal.css" rel="stylesheet" />
+    <link href="~/Content/Styles/main.css" rel="stylesheet" />
+    <link href="~/Content/Styles/responsive.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="tel:+01-913-322-7000"><i class="fa fa-phone"></i> 913-322-7000</a></li>
+                                <li><a href="mailto:info@centriqcstore.com"><i class="fa fa-envelope"></i> info@centriqcstore.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://www.facebook.com/CentriqTraining/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/CentriqTraining" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/centriq-foss-training" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/user/CentriqTraining" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="#https://plus.google.com/108553092060324883743" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="index.html"><span>The</span>ComicPanel</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <!-- Unauthenticated -->
+                                <li id="cart-button">
+                                    <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+                                    <span id="cart-notification" class="notification-counter"></span>
+                                </li>
+                                <li><a href="#"><i class="fa fa-user"></i> Register</a></li>
+                                <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
+
+                                <!-- Authenticated -->
+                                <!--
+                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                                <li><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
+                                -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("FAQ", "FAQ", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+    @* END OF NAV FROM TEMPLATE************** *@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="vertical-text-center alert alert-danger">
+                        @ViewBag.ErrorMessage
+                    </div>
+                }
+            </div>
+        </div>
+        @RenderBody()
+    </div>
+    <footer id="footer">
+        <!--footer-->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p>Copyright &copy;@DateTime.Now.Year The ComicPanel. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer><!--/footer-->
+    <div id="adminLink" onclick="openNav()" class="button">
+        <span class="vertical-text">ADMIN</span>
+    </div>
+@if (User.IsInRole("Admin"))
+{
+    <div id="adminSideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">User Admin</a>
+        <a href="#">Roles Admin</a>
+        <a href="#">Manage Titles</a>
+        <a href="#">Manage Authors</a>
+    </div>
+}
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- jQuery UI js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Content/Scripts/cart.js"></script>
+    <script src="~/Content/Scripts/formValidation.js"></script>
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById('adminSideNav').style.width = "250px";
+            document.getElementById('adminLink').style.display = "none";
+        }
+
+        function closeNav() {
+            document.getElementById('adminSideNav').style.width = "0";
+            document.getElementById('adminLink').style.display = "block";
+        }
+
+        //dialog box function
+        $(function () {
+            $('#dialog').dialog({
+
+                autoOpen: false,
+                show: {
+                    effect: "fade",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+                //other effects include blind, bounce, clip, drop, fold, puff, pulsate, scale, shake, slide
+            });//end dialog()
+            //wire up the button to open dialog box
+            $('#cart-button').on('click', function () {
+                $('#dialog').dialog('open');
+            });//end cartbutton()
+
+        });//end ready()
+        $(function () {
+            $("#accordion").accordion();
+        });
+
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
